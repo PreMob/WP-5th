@@ -1,0 +1,35 @@
+<html>
+<head> 
+  
+  <title>Print Todays Date</title> 
+ 
+</head> 
+  
+<body> 
+  
+  <h1>Todays Date Is</h1> 
+   
+  <button onclick="getDate()">In Words</button>
+  <p id="result"></p> 
+    
+  <script>
+  function getDate() {
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+
+      const currentDate = new Date();
+
+
+      const day = days[currentDate.getDay()];
+      const month = months[currentDate.getMonth()];
+      const year = currentDate.getFullYear();
+
+
+      const dateInWords = `${day}, ${month} ${currentDate.getDate()}, ${year}`;
+
+      document.getElementById("result").innerHTML = "The result is " + dateInWords;
+  }
+  </script>
+</body>
+</html>

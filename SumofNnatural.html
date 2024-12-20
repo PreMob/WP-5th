@@ -1,0 +1,28 @@
+<html>
+<head> 
+  
+  <title>Sum of n natural numbers</title> 
+ 
+</head> 
+  
+<body> 
+  
+  <h1>Sum of n natural numbers</h1> 
+   
+  <p>Enter n values <input type="text" id="nval"></p> 
+    
+  <button onclick="findSum(nval.value)">Calculate</button>
+  <p id="result"></p> 
+
+<script>   
+function findSum(n) { 
+	let sum = 0;  
+  
+	for (let i = 1; i <= n; i++) 
+		sum = sum + i; 
+
+	document.getElementById("result").innerHTML = "The result is" + sum; 
+} 
+</script>
+</body>
+</html>

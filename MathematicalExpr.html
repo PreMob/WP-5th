@@ -1,0 +1,34 @@
+<html>
+<head> 
+  
+  <title>Arithmetic Expression Evaluation</title> 
+ 
+</head> 
+  
+<body> 
+  
+  <h1>Arithmetic Expression Evaluation</h1> 
+   
+  <p>Enter an arithmetic expression: <input type="text" id="expression"></p> 
+    
+  <button onclick="evaluateExpression()">Evaluate</button>
+  <p id="result"></p> 
+    
+
+   <script> 
+      
+   function evaluateExpression() 
+      { 
+      
+         var expression = document.getElementById("expression").value; 
+ 
+         var result = eval(expression); 
+    
+        document.getElementById("result").innerHTML = "The result of the expression " + expression + " is " + result; 
+        } 
+
+     </script>
+ 
+  </body>
+ 
+</html>

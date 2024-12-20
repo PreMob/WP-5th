@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>
+		Form validation using HTML and JavaScript
+	</title>
+</head>
+
+<body>
+	<h1> REGISTRATION FORM 	</h1>
+
+	<form name="RegForm" onsubmit="return validate()" method="post">
+		
+	
+		<p>
+			Name:
+			<input type="text" size="65" name="Name" />
+		</p>
+
+		<br />
+
+		<p>
+			E-mail Address:
+			<input type="text" size="65" name="EMail" />
+		</p>
+
+		<br />
+
+
+		<p>
+			Gender:
+			<input type="radio" name="Gender" value="Male"> Male
+			<input type="radio" name="Gender" value="Female"> Female
+		</p>
+
+		<br />
+
+		<p>
+			Telephone:
+			<input type="text" size="65" name="Telephone" />
+		</p>
+
+		<br />
+
+		<p>
+			SELECT YOUR COURSE
+			<select type="text" value="" name="Subject">
+				<option>BTECH</option>
+				<option>BBA</option>
+				<option>BCA</option>
+				<option>B.COM</option>
+				<option>GEEKFORGEEKS</option>
+			</select>
+		</p>
+
+		<br />
+
+		<br />
+
+		<p>
+			Comments:
+			<textarea cols="55" name="Comment"> </textarea>
+		</p>
+
+		<p>
+			<input type="submit" value="send" name="Submit" />
+			<input type="reset" value="Reset" name="Reset" />
+		</p>
+	
+            
+</form>
+
+<script>
+
+   function validate(){
+	var name = document.forms.RegForm.Name.value;
+	var email = document.forms.RegForm.EMail.value;
+	var phone = document.forms.RegForm.Telephone.value;
+	
+
+	//Javascript reGex for Email Validation.
+	var regEmail=/\S+@\S+\.\S+/; 
+
+ 
+
+	if (name == "") 
+	{
+		window.alert("Please enter your name properly.");
+		name.focus();
+		return false;
+	}
+
+	
+	if (email == "" || !regEmail.test(email))
+	 {
+		window.alert("Please enter a valid e-mail address.");
+		email.focus();
+		return false;
+	}
+	
+
+	if (phone == "" || phone.length<10) 
+	{
+		alert("Please enter valid phone number.");
+		phone.focus();
+		return false;
+	}
+
+	
+	return true;
+} 
+</script>
+</body>
+</html>
